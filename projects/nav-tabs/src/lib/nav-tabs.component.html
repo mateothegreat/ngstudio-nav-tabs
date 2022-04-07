@@ -1,0 +1,18 @@
+<div class="wrapper">
+
+    <div *ngFor="let item of instance.config.items"
+         (click)="onItemClick(item)"
+         [class.active]="selected?.label === item.label"
+         [style.--hover-border-color]="instance.config.hover.borderColor"
+         [style.--active-border-color]="instance.config.active.borderColor"
+         class="item">
+
+        <div class="label">
+
+            {{ item.label}}
+
+        </div>
+
+    </div>
+
+</div>

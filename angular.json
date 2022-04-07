@@ -127,6 +127,37 @@
           }
         }
       }
+    },
+    "nav-tabs": {
+      "projectType": "library",
+      "root": "projects/nav-tabs",
+      "sourceRoot": "projects/nav-tabs/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/nav-tabs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/nav-tabs/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/nav-tabs/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nav-tabs/src/test.ts",
+            "tsConfig": "projects/nav-tabs/tsconfig.spec.json",
+            "karmaConfig": "projects/nav-tabs/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngstudio-nav-tabs"
