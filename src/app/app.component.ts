@@ -21,12 +21,14 @@ export class AppComponent implements AfterViewInit {
 
             active: {
 
-                borderColor: 'red'
+                borderColor: 'red',
+                backgroundColor: '#eee'
 
             },
             hover: {
 
-                borderColor: 'blue'
+                borderColor: 'blue',
+                backgroundColor: 'red'
 
             },
             items: [
@@ -38,7 +40,8 @@ export class AppComponent implements AfterViewInit {
 
                 }, {
 
-                    label: 'two'
+                    label: 'two',
+                    active: true
 
                 }
 

@@ -8,11 +8,12 @@
 
             padding: 10px 15px;
             cursor: pointer;
-            border-bottom: 3px solid transparent;
+            border-top: 3px solid transparent;
 
             &:hover {
 
-                border-bottom: 3px solid var(--hover-border-color);
+                border-top: 3px solid var(--hover-border-color);
+                background-color: var(--hover-background-color)
 
             }
 
@@ -20,7 +21,8 @@
 
         .active {
 
-            border-bottom: 3px solid var(--active-border-color);
+            border-top: 3px solid var(--active-border-color);
+            background-color: var(--active-background-color)
 
         }
 

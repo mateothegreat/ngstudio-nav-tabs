@@ -2,9 +2,11 @@
 
     <div *ngFor="let item of instance.config.items"
          (click)="onItemClick(item)"
-         [class.active]="selected?.label === item.label"
+         [class.active]="selected?.label === item.label || item.active"
          [style.--hover-border-color]="instance.config.hover.borderColor"
+         [style.--hover-background-color]="instance.config.hover.backgroundColor"
          [style.--active-border-color]="instance.config.active.borderColor"
+         [style.--active-background-color]="instance.config.active.backgroundColor"
          class="item">
 
         <div class="label">
